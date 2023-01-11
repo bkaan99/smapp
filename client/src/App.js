@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+import Home from './pages/Home.jsx'; // jsx olarak yazmassak çalışmıyor.
+import Auth from './pages/Auth.jsx'; // jsx olarak yazmassak çalışmıyor.
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-      </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

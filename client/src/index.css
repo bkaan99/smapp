@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .text-area-deneme-1 {
+        @apply border p-2 rounded-md outline-none;
+    }
+}
